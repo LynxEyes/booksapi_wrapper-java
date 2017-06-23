@@ -7,7 +7,7 @@ import com.google.inject.name.Names;
 import com.ivojesus.adapters.googleapi.BookRepository;
 import com.ivojesus.adapters.googleapi.HTTPClient;
 import com.ivojesus.adapters.googleapi.OkHTTPClient;
-import com.ivojesus.cli.BookCLI;
+import com.ivojesus.adapters.cli.BookCLI;
 import com.ivojesus.core.books.IBookRepository;
 import com.ivojesus.core.books.FindBooks;
 import com.ivojesus.core.books.IFindBooks;

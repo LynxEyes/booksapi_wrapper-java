@@ -1,7 +1,7 @@
-package unit.com.ivojesus.cli;
+package unit.com.ivojesus.adapters.cli;
 
 import com.greghaskins.spectrum.Spectrum;
-import com.ivojesus.cli.BookCLIArgs;
+import com.ivojesus.adapters.cli.BookCLIArgs;
 import com.ivojesus.core.books.BookQuery;
 import org.junit.runner.RunWith;
 

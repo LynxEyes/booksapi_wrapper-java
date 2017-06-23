@@ -1,4 +1,4 @@
-package com.ivojesus.cli;
+package com.ivojesus.adapters.cli;
 
 import com.beust.jcommander.JCommander;
 import com.ivojesus.core.books.Book;

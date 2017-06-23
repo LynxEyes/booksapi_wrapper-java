@@ -1,21 +1,10 @@
 package acceptance;
 
 import com.greghaskins.spectrum.Spectrum;
-import com.greghaskins.spectrum.Variable;
-import com.ivojesus.cli.BookCLI;
 import org.junit.runner.RunWith;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static com.greghaskins.spectrum.dsl.gherkin.Gherkin.feature;
-import static com.greghaskins.spectrum.dsl.gherkin.Gherkin.given;
-import static com.greghaskins.spectrum.dsl.gherkin.Gherkin.scenario;
-import static com.greghaskins.spectrum.dsl.gherkin.Gherkin.then;
-import static com.greghaskins.spectrum.dsl.gherkin.Gherkin.when;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.matchesPattern;
-import static org.hamcrest.Matchers.startsWith;
 
 @RunWith(Spectrum.class)
 public class BooksCLISpec {{
