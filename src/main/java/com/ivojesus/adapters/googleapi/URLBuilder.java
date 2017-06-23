@@ -7,7 +7,7 @@ import javax.inject.Named;
 import java.util.Optional;
 
 public class URLBuilder {
-    private final String baseURL; //= "https://www.googleapis.com/books/v1/volumes?q=";
+    private final String baseURL;
 
     @Inject
     public URLBuilder(@Named("baseURL") String baseURL) {

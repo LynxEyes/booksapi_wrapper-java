@@ -13,9 +13,6 @@ buildscript {
 }
 apply plugin: "io.franzbecker.gradle-lombok"
 apply plugin: 'java'
-apply plugin: 'application'
-
-mainClassName = "com.ivojesus.app.Application"
 
 sourceCompatibility = 1.8
 
