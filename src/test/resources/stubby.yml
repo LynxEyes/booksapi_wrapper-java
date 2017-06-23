@@ -1,0 +1,10 @@
+-  request:
+      method: GET
+      url: /books
+
+   response:
+      headers:
+         content-type: application/json
+      status: 200
+      body: >
+         {"fruit": "banana"}
