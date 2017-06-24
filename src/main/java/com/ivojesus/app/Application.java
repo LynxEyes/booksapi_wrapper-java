@@ -15,10 +15,10 @@ import com.ivojesus.core.books.IFindBooks;
 public class Application {
 
     public static void main(String[] args) {
-        injector().getInstance(BookCLI.class).run(args);
+        context().getInstance(BookCLI.class).run(args);
     }
 
-    private static Injector injector() {
+    public static Injector context() {
         return Guice.createInjector(new AppContext());
     }
 
