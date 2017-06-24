@@ -12,6 +12,10 @@ import com.ivojesus.core.books.IBookRepository;
 import com.ivojesus.core.books.FindBooks;
 import com.ivojesus.core.books.IFindBooks;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -23,12 +27,32 @@ public class Application {
     }
 
     private static class AppContext extends AbstractModule {
+        private Properties properties;
+
+        public AppContext() {
+            this.properties = setupEnv();
+        }
+
         @Override
         protected void configure() {
             bind(IFindBooks.class).to(FindBooks.class);
             bind(IBookRepository.class).to(BookRepository.class);
-            bind(String.class).annotatedWith(Names.named("baseURL")).toInstance("https://www.googleapis.com/books/v1/volumes?q=");
+            bind(String.class).annotatedWith(Names.named("baseURL")).toInstance(properties.getProperty("BASE_URL"));
             bind(HTTPClient.class).to(OkHTTPClient.class);
+        }
+
+        private Properties setupEnv() {
+            Properties props = new Properties();
+            InputStream is = Application.class.getResourceAsStream("/env.properties");
+
+            try {
+                if (is != null)
+                    props.load(is);
+            } catch (IOException e) {
+                // TODO: Do something... like complain or something
+            }
+
+            return props;
         }
     }
 }
