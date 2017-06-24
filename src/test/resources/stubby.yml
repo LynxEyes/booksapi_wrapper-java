@@ -1,10 +1,22 @@
--  request:
-      method: GET
-      url: /books
+- request:
+    method: GET
+    url: /books
+    query:
+      q: tolkien
 
-   response:
-      headers:
-         content-type: application/json
-      status: 200
-      body: >
-         {"fruit": "banana"}
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./tolkien.json
+
+- request:
+    method: GET
+    url: /fruits
+
+  response:
+    headers:
+       content-type: application/json
+    status: 200
+    body: >
+       {"fruit": "banana"}

@@ -11,8 +11,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class OkHTTPClientTest extends StubbedNetworkTest {
-    private final String url = String.format("%s/books", localBaseURL);
+    private final String url = String.format("%s/fruits", localBaseURL);
     private final OkHTTPClient subject = new OkHTTPClient();
+
+    @Override
+    public String getStubbyFile() {
+        return "src/test/resources/stubby.yml";
+    }
 
     @Test
     public void getsURLContentAsAString() throws IOException {
@@ -21,10 +26,5 @@ public class OkHTTPClientTest extends StubbedNetworkTest {
         String response = subject.get(url);
 
         assertThat(response, is(equalTo(expectedResponse)));
-    }
-
-    @Override
-    public String getStubbyFile() {
-        return "src/test/resources/stubby.yml";
     }
 }

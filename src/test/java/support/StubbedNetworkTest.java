@@ -12,13 +12,13 @@ public abstract class StubbedNetworkTest {
     public abstract String getStubbyFile();
 
     @Before
-    public void setUp() throws Exception {
+    public void setUpStubby() throws Exception {
         this.stubby = new StubbyClient();
-        stubby.startJetty(port, getStubbyFile()); //"src/test/resources/stubby.yml");
+        stubby.startJetty(port, getStubbyFile());
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDownStubby() throws Exception {
         stubby.stopJetty();
     }
 }

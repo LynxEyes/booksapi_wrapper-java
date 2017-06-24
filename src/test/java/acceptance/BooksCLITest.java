@@ -4,25 +4,30 @@ import com.ivojesus.adapters.cli.BookCLI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import support.StubbedNetworkTest;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.regex.Pattern;
-import java.util.regex.*;
 
 import static com.ivojesus.app.Application.context;
 import static java.util.regex.Pattern.CASE_INSENSITIVE;
-import static java.util.regex.Pattern.MULTILINE;
 import static java.util.regex.Pattern.compile;
 import static org.hamcrest.CoreMatchers.startsWith;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.matchesPattern;
+import static org.hamcrest.core.StringContains.containsStringIgnoringCase;
 
-public class BooksCLITest {
+public class BooksCLITest extends StubbedNetworkTest {
 
     private ByteArrayOutputStream baos;
     private final PrintStream originalOut = System.out;
     private final BookCLI cli = context().getInstance(BookCLI.class);
+
+    @Override
+    public String getStubbyFile() {
+        return "src/test/resources/stubby.yml";
+    }
 
     @Before
     public void setUp() {
@@ -43,16 +48,14 @@ public class BooksCLITest {
         assertThat(baos.toString(), startsWith("Usage: "));
     }
 
+    // TODO: This is far from a meaningful test... I need to find a way to better assert that the response makes sense.
     @Test
     public void WhenGivenATermPrintsBooksThatMatchTheTerm() {
         String term = "tolkien";
         String[] args = new String[]{term};
 
-        // TODO: What I need here is to stub the API call and assert on the expected output.
-//        Pattern pattern = compile(".*Tolkien.*", CASE_INSENSITIVE);
-//
-//        cli.run(args);
-//
-//        assertThat(baos.toString(), matchesPattern(pattern));
+        cli.run(args);
+
+        assertThat(baos.toString(), containsStringIgnoringCase(term));
     }
 }
