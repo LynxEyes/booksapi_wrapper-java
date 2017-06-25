@@ -1,6 +1,6 @@
-package com.ivojesus.adapters.googleapi;
+package com.ivojesus.book.adapters.googleapi;
 
-import com.ivojesus.core.books.BookQuery;
+import com.ivojesus.book.core.BookQuery;
 
 import javax.inject.Inject;
 import javax.inject.Named;

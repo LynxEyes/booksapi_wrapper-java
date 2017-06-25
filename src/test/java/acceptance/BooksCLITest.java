@@ -1,6 +1,6 @@
 package acceptance;
 
-import com.ivojesus.adapters.cli.BookCLI;
+import com.ivojesus.book.adapters.cli.BookCLI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,14 +8,10 @@ import support.StubbedNetworkTest;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.regex.Pattern;
 
 import static com.ivojesus.app.Application.context;
-import static java.util.regex.Pattern.CASE_INSENSITIVE;
-import static java.util.regex.Pattern.compile;
 import static org.hamcrest.CoreMatchers.startsWith;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.matchesPattern;
 import static org.hamcrest.core.StringContains.containsStringIgnoringCase;
 
 public class BooksCLITest extends StubbedNetworkTest {

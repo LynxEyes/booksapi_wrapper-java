@@ -1,11 +1,11 @@
-package com.ivojesus.adapters.googleapi;
+package com.ivojesus.book.adapters.googleapi;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ivojesus.adapters.googleapi.entities.ApiResponse;
-import com.ivojesus.core.books.Book;
-import com.ivojesus.core.books.IBookRepository;
-import com.ivojesus.core.books.BookQuery;
+import com.ivojesus.book.adapters.googleapi.entities.ApiResponse;
+import com.ivojesus.book.core.Book;
+import com.ivojesus.book.core.IBookRepository;
+import com.ivojesus.book.core.BookQuery;
 
 import javax.inject.Inject;
 import java.io.IOException;

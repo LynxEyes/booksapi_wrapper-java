@@ -1,4 +1,4 @@
-package com.ivojesus.core.books;
+package com.ivojesus.book.core;
 
 import javax.inject.Inject;
 import java.io.IOException;

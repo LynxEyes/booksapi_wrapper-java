@@ -1,7 +1,7 @@
-package com.ivojesus.adapters.cli;
+package com.ivojesus.book.adapters.cli;
 
 import com.beust.jcommander.Parameter;
-import com.ivojesus.core.books.BookQuery;
+import com.ivojesus.book.core.BookQuery;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

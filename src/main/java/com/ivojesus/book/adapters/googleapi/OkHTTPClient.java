@@ -1,4 +1,4 @@
-package com.ivojesus.adapters.googleapi;
+package com.ivojesus.book.adapters.googleapi;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

@@ -1,4 +1,4 @@
-package com.ivojesus.adapters.googleapi;
+package com.ivojesus.book.adapters.googleapi;
 
 import java.io.IOException;
 

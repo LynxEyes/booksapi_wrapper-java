@@ -1,12 +1,12 @@
-package unit.com.ivojesus.adapters.googleapi;
+package unit.com.ivojesus.book.adapters.googleapi;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
-import com.ivojesus.adapters.googleapi.BookRepository;
-import com.ivojesus.adapters.googleapi.URLBuilder;
-import com.ivojesus.core.books.Book;
-import com.ivojesus.core.books.BookQuery;
-import com.ivojesus.adapters.googleapi.HTTPClient;
+import com.ivojesus.book.adapters.googleapi.BookRepository;
+import com.ivojesus.book.adapters.googleapi.URLBuilder;
+import com.ivojesus.book.core.Book;
+import com.ivojesus.book.core.BookQuery;
+import com.ivojesus.book.adapters.googleapi.HTTPClient;
 import org.junit.Test;
 
 import java.io.IOException;

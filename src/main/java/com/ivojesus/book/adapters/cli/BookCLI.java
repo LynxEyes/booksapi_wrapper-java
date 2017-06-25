@@ -1,8 +1,8 @@
-package com.ivojesus.adapters.cli;
+package com.ivojesus.book.adapters.cli;
 
 import com.beust.jcommander.JCommander;
-import com.ivojesus.core.books.Book;
-import com.ivojesus.core.books.IFindBooks;
+import com.ivojesus.book.core.Book;
+import com.ivojesus.book.core.IFindBooks;
 
 import javax.inject.Inject;
 import java.io.IOException;

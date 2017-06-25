@@ -1,6 +1,6 @@
-package unit.com.ivojesus.adapters.googleapi;
+package unit.com.ivojesus.book.adapters.googleapi;
 
-import com.ivojesus.adapters.googleapi.OkHTTPClient;
+import com.ivojesus.book.adapters.googleapi.OkHTTPClient;
 import org.junit.Test;
 import support.StubbedNetworkTest;
 

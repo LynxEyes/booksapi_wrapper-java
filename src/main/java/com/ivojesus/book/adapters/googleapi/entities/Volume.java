@@ -1,4 +1,4 @@
-package com.ivojesus.adapters.googleapi.entities;
+package com.ivojesus.book.adapters.googleapi.entities;
 
 import lombok.NoArgsConstructor;
 
