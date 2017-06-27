@@ -44,5 +44,6 @@ dependencies {
     testCompile 'com.greghaskins:spectrum:1.1.1'
     testCompile 'org.hamcrest:hamcrest-junit:2.0.0.0'
     testCompile 'io.github.azagniotov:stubby4j:5.0.0'
-    testCompile "org.mockito:mockito-core:2.+"
+    testCompile 'org.mockito:mockito-core:2.+'
+    testCompile 'com.natpryce:make-it-easy:4.0.0'
 }

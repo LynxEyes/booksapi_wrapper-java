@@ -25,28 +25,24 @@ public class BooksCLITest extends StubbedNetworkTest {
         return "src/test/resources/stubby.yml";
     }
 
-    @Before
-    public void setUp() {
+    @Before public void setUp() {
         baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));
     }
 
-    @After
-    public void tearDown() {
+    @After public void tearDown() {
         System.out.flush();
         System.setOut(originalOut);
     }
 
-    @Test
-    public void WhenRunningWithoutArgumentsPrintsUsageMessage() {
+    @Test public void WhenRunningWithoutArgumentsPrintsUsageMessage() {
         String[] args = new String[]{};
         cli.run(args);
         assertThat(baos.toString(), startsWith("Usage: "));
     }
 
     // TODO: This is far from a meaningful test... I need to find a way to better assert that the response makes sense.
-    @Test
-    public void WhenGivenATermPrintsBooksThatMatchTheTerm() {
+    @Test public void WhenGivenATermPrintsBooksThatMatchTheTerm() {
         String term = "tolkien";
         String[] args = new String[]{term};
 
