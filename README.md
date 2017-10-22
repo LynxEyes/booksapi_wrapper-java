@@ -58,7 +58,7 @@ This is like those convoluted "hello world" programs you see on workshops and co
 
 ### Vertical Slicing
 
-This is an oganizational concept. The idea behind it is that you should slice your app into vertical slices, instead of the traditional horizontal ones.
+This is an organizational concept. The idea behind it is that you should slice your app into vertical slices, instead of the traditional horizontal ones.
 
 Typical apps are organized in horizontal slicing, where you have a package for models, a package for repositories, a package for services/usecases, etc..
 On vertical slicing you'd have a package for your entity or functionality and inside that you'll have your models, repositories, services, etc..
